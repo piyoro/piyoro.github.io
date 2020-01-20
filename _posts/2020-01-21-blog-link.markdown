@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "naver blog link"
+description: piyoro's naver blog.
+date:   2020-01-21 03:07:36 +0530
+---
+Naver blog link
+[Naver blog link]
+(https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false)
