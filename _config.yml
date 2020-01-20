@@ -22,11 +22,9 @@ texture:
   showNav: true
   showPicker: true
   analytics_id: piyoro
-  disqus_shortname: games
-  analytics_id: lj.piyoro
 
   # generate social links in footer
-  #social_links:
+  social_links:
   #  twitter: thelehhman
     github:  piyoro
   #  linkedIn: in/thelehhman
