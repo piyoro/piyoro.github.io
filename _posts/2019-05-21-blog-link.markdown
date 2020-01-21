@@ -4,5 +4,8 @@ title:  "naver blog link"
 description: piyoro's naver blog.
 date:   2020-01-21 03:07:36 +0530
 ---
-Naver blog link
+#Naver blog link
+
 [10진수를 2진수로 변환, 2진수를 10진수로 변환](https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false)
+
+[부호화절대치, 1의 보수, 2의 보수](https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221774762703&redirect=Dlog&widgetTypeCall=true&directAccess=false)
