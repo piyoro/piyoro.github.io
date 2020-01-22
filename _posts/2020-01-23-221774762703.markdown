@@ -3,7 +3,6 @@ title:  "부호화절대치, 1의 보수, 2의 보수"
 categories:
   - program
 tags:
-  - data structure
   - 프로그램 일반
   - 자료구조
 description: 부호화절대치, 1의 보수, 2의 보수

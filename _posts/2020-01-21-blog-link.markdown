@@ -3,7 +3,6 @@ title:  "프로그램 일반 블로그 링크 모음"
 categories:
   - program
 tags:
-  - data structure
   - 프로그램 일반
   - 자료구조
 description:

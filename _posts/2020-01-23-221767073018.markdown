@@ -1,0 +1,12 @@
+---
+title:  "자바퍼즐러 1번째 퍼즐 : 홀수 확인"
+categories:
+  - javapuzzler
+tags:
+  - 자바
+  - 자바퍼즐러
+description: "자바퍼즐러 1번째 퍼즐 : 홀수 확인"
+---
+
+## 자바퍼즐러 1번째 퍼즐 : 홀수 확인
+[https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221767073018&redirect=Dlog&widgetTypeCall=true&directAccess=false](https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221767073018&redirect=Dlog&widgetTypeCall=true&directAccess=false)
