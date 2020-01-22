@@ -1,0 +1,13 @@
+---
+title:  "10진수를 2진수로 변환, 2진수를 10진수로 변환"
+categories:
+  - program
+tags:
+  - data structure
+  - 프로그램 일반
+  - 자료구조
+description: 10진수를 2진수로 변환, 2진수를 10진수로 변환
+---
+
+## 10진수를 2진수로 변환, 2진수를 10진수로 변환
+[https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false](https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false)
