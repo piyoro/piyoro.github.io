@@ -8,5 +8,20 @@ tags:
 description: 10진수를 2진수로 변환, 2진수를 10진수로 변환
 ---
 
-## 10진수를 2진수로 변환, 2진수를 10진수로 변환
+# 10진수를 2진수로 변환, 2진수를 10진수로 변환
+## 진법변환 /기수변환
+
+실무에선 그린 많이 사용하지 않았기에 정리가 필요하다.
+
+10진수 19을 2진수로 변환한다.
+
+<img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAxMTNfMTMg/MDAxNTc4OTIwNzM4NTcx.-2r6axCwpfMvhILG3LUIg9VVACBhTNvqfQkgRyWGn9Ag.0R8r-8Na3gGqxoRau0FZYe1CjFcOFAzO2-rSwOxayhAg.PNG.piyoro/10_2진수변환.png?type=w800" />
+
+10진수 19를 기수 2로 나누기를 반복하며 나머지 값을 화살표 방향대로 읽는다.
+
+​=> 2진수 : 100011
+반대로 2진수 19를 10진수로 표현하려면
+<img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAxMTNfMTg0/MDAxNTc4OTIwNzgxNjUy.TbkdCnCRRQuq4uyOKun7LSZ4v43ulNIfOXsSDSTGFzIg.NsbeJSuwExI7iB_ReY2bMf9ujBIAUiEP0FHTMR6HCXAg.PNG.piyoro/2_10진수변환.png?type=w800" />
+2진수 각 자리수와 기수의 제곱값을 더한 값으로 구한다.
+
 [https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false](https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false)
