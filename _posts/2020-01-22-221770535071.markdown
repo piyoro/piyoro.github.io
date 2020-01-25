@@ -24,4 +24,6 @@ description: 10진수를 2진수로 변환, 2진수를 10진수로 변환
 <img src="https://mblogthumb-phinf.pstatic.net/MjAyMDAxMTNfMTg0/MDAxNTc4OTIwNzgxNjUy.TbkdCnCRRQuq4uyOKun7LSZ4v43ulNIfOXsSDSTGFzIg.NsbeJSuwExI7iB_ReY2bMf9ujBIAUiEP0FHTMR6HCXAg.PNG.piyoro/2_10진수변환.png?type=w800" />
 2진수 각 자리수와 기수의 제곱값을 더한 값으로 구한다.
 
+10011(2) = 16 + 0 + 0 + 2 + 1 = 19(10)이 된다.
+
 [https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false](https://blog.naver.com/PostView.nhn?blogId=piyoro&logNo=221770535071&redirect=Dlog&widgetTypeCall=true&directAccess=false)
