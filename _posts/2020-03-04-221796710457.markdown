@@ -1,0 +1,80 @@
+---
+title:  "Apache Commons Lang - StringEscapeUtils Deprecated 대안"
+categories:
+  - 자바
+tags:
+  - 자바
+  - 라이브러리
+description:
+  - StringEscapeUtils Deprecated
+  - Apache Commons Text
+---
+
+Apache Commons Text 반영
+
+몇일전에 네이버의 xss filter 라이브러리 인 [lucy-xss-filter](https://github.com/naver/lucy-xss-filter) 프로젝트의 소스를 확인하는 중에 commons lang 라이브러의 StringEscapeUtils.escapeHtml4 를 사용하는 부분을 확인하고, 개인적으로 사용하려고 보니 deprecated 문구를 확인했다.
+
+![](https://postfiles.pstatic.net/MjAyMDAyMDVfMTg4/MDAxNTgwODM2NjAyMTY4.mZKalzYysI4VWmNfCnZw0p7r2D0QOqSMZZUGTgXlcRcg.ftdlC2rfBPPeSITuMz-ev0v1MUKflnYC6kJsIql_mHAg.PNG.piyoro/SE-be40ed4d-93fe-4b97-bfb2-46c621e1764a.png?type=w580)
+
+lucy-xss-filter 에서 사용하는 commons-lang 라이브러리의 버전은 3.3.2 이고, 내가 사용하려던 버전은 3.8 이상 버전이었다.
+​
+
+처음엔 내가 직접 사용한 라이브러리는 아니니, 네이버는 저 deprecated되는 라이브러리에 대한 대응을 어떻게 하려나 하고 슬쩍 지나쳤다.
+
+지금 와서 개인적으로 새로운 프로젝트를 진행하려 보니, 관련 warning 이 상당히 신경쓰여 commons lang 프로젝트는 어떻게 하려고 저러다 싶어 찾아봤다.
+
+​
+[Apache Commons – Apache Commons](http://commons.apache.org)
+들어가서  [좌측메뉴 - components - Lang]을 선택 혹은
+
+​
+그냥 아래링크로 바로 접속해보면된다.
+http://commons.apache.org/proper/commons-lang/
+
+
+좌측 메뉴 javadoc 로 들어가면 보이는 화면의 상단 링크 중에 DPRECATED 를 선택하면 DEPRECATED 되는 패키지, 인터페이스, 클래스, 속성... 거의 3.6 버전 기준으로 상당히 많은 부분이 deprecated 된다.
+
+![](https://postfiles.pstatic.net/MjAyMDAyMDVfMjE3/MDAxNTgwODM2NjAyOTIw.UH9wuqGRAQek3PRAdsKtg7C3QOzplXDtUxP0lsUFtHgg.kl4CvPhR830d7Iv-_cG0r5fWjuik_A8B83CqZSkv7zMg.PNG.piyoro/SE-1c2967c0-8af9-4c2d-8a19-ed6e0137e10f.png?type=w580)
+commons-text 프로젝트로 대처된다는 내용이다.
+
+![](https://postfiles.pstatic.net/MjAyMDAyMDVfMjM3/MDAxNTgwODM2NjAzNjA5.uz3R29fQwX59JAo2iVHfJcN8yj2BUbF7DXgmy67bKhYg.5SciJxBqS2LPfEltsSEvYf55OfEpKZ2QsLscL-0lEJsg.PNG.piyoro/SE-af94512f-6715-4942-9366-54a10dfd58e7.png?type=w580)
+
+내가 사용하려 했던, StringEscapeUtils 도 commons-text 로 대처된다.
+
+이참에 한번 받아보자는 생각으로 mvnrepository 에서 찾아봤다.
+
+
+[Maven Repository: Search/Browse/Explore](mvnrepository.com)
+
+
+현재 기준의 commons-text 최신 버전 1.8 으로
+
+Maven
+
+![](https://postfiles.pstatic.net/MjAyMDAyMDVfMTA1/MDAxNTgwODM2NjA1NDQ2.H1k2NHJLUstZdrcOtKW32Fa2SC3zrt0fYO8JKLgaPzMg.1249n76ScP4MZNMhDLYRp4929NJsScFaQ-pDb2T5N2gg.PNG.piyoro/SE-7b57535c-6e8e-4103-bc87-db346e1bf92b.png?type=w580)
+```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-text</artifactId>
+    <version>1.8</version>
+</dependency>
+```
+gradle
+
+![](https://postfiles.pstatic.net/MjAyMDAyMDVfMjI4/MDAxNTgwODM2NjAxNzQ0.gWxTpvWRUVVDseV06Y29-w3mWTCidj7l5fRtsE8W6wEg.uBJNLA2OF16OuPzt_AO-xqDQoXmRYP9Inq8lXNyLAjsg.PNG.piyoro/SE-20c90cbc-a606-47c5-9213-e76605b54ac5.png?type=w580)
+```
+compile group: 'org.apache.commons', name: 'commons-text', version: '1.8'
+```
+의존성 추가해주니 경고없이,
+
+```java
+import org.apache.commons.text.StringEscapeUtils;
+StringEscapeUtils.escapeJava(str);
+```
+
+라이브러리 및 패키지만 변경됐지, 변경없이 잘 돌아간다.
+commons 에서 라이브러리의 도메인정리를 한건가 싶은 정도로만 생각든다.
+기존 프로젝트는 굳이 commons-lang 버전변경없이 진행하겠지만, commons-lang 라이브러리의 3.6 이상 버전을 사용한다면 처음부터 commons-text 라이브러리를 추가해주면 좋겠다.
+
+
+원래 이렇게 일일이 찾아보는 성격은 아닌데, 한번 정리해두면 유용할 것 같아 정리해본다.
